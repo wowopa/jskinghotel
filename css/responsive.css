@@ -111,6 +111,27 @@
         height: 300px; /* 모바일에서는 지도 높이 축소 */
     }
 
+    /* 모바일에서 방 그리드를 가로 스크롤로 변경 */
+    .room-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        padding-bottom: 20px; /* 스크롤바 공간 확보 */
+        scroll-snap-type: x mandatory; /* 스크롤 스냅 효과 */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .room-grid::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+
+    .room-card {
+        min-width: 260px; /* 카드가 찌그러지지 않도록 최소 너비 설정 */
+        flex-shrink: 0;
+        scroll-snap-align: start;
+    }
+
     /* 주변시설 가로 스크롤 */
     .surround-grid {
         display: flex;
