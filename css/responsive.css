@@ -116,7 +116,7 @@
         display: flex;
         overflow-x: auto;
         gap: 15px;
-        padding-bottom: 20px; /* 스크롤바 공간 확보 */
+        padding: 0 20px 20px 20px; /* 양쪽 여백 추가 */
         scroll-snap-type: x mandatory; /* 스크롤 스냅 효과 */
         -ms-overflow-style: none; /* IE and Edge */
         scrollbar-width: none; /* Firefox */
@@ -127,9 +127,13 @@
     }
 
     .room-card {
-        min-width: 280px; /* 카드가 찌그러지지 않도록 최소 너비 설정 */
+        min-width: calc(100vw - 40px); /* 모바일 화면 전체 너비에 맞춤 */
         flex-shrink: 0;
         scroll-snap-align: start;
+    }
+
+    .room-img {
+        height: 200px; /* 모바일에서 이미지 높이 축소 */
     }
 
     /* 주변시설 가로 스크롤 */
