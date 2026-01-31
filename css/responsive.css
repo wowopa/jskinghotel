@@ -111,15 +111,12 @@
         height: 300px; /* 모바일에서는 지도 높이 축소 */
     }
 
-    /* 모바일에서 방 그리드를 가로 스크롤로 변경 */
+    /* 모바일에서 방 그리드를 수직 나열로 변경 */
     .room-grid {
         display: flex;
-        overflow-x: auto;
+        flex-direction: column;
         gap: 15px;
-        padding: 0 20px 20px 20px; /* 양쪽 여백 추가 */
-        scroll-snap-type: x mandatory; /* 스크롤 스냅 효과 */
-        -ms-overflow-style: none; /* IE and Edge */
-        scrollbar-width: none; /* Firefox */
+        padding: 0 20px 20px 20px;
     }
 
     .room-grid::-webkit-scrollbar {
@@ -127,7 +124,7 @@
     }
 
     .room-card {
-        min-width: calc(100vw - 40px); /* 모바일 화면 전체 너비에 맞춤 */
+        min-width: unset; /* 최소 너비 제약 제거 */
         flex-shrink: 0;
         scroll-snap-align: start;
     }
