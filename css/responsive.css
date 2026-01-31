@@ -127,7 +127,7 @@
     }
 
     .room-card {
-        min-width: 260px; /* 카드가 찌그러지지 않도록 최소 너비 설정 */
+        min-width: 280px; /* 카드가 찌그러지지 않도록 최소 너비 설정 */
         flex-shrink: 0;
         scroll-snap-align: start;
     }

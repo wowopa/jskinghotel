@@ -281,8 +281,8 @@ header.scrolled .btn-menu span {
 
 .room-grid {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
 }
 
 .room-card {
@@ -309,7 +309,7 @@ header.scrolled .btn-menu span {
 }
 
 .room-info {
-    padding: 30px;
+    padding: 25px;
     text-align: center;
 }
 
