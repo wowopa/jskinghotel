@@ -1,0 +1,158 @@
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .header-inner {
+        padding: 0 20px;
+    }
+
+    /* 모바일에서 예약 버튼 숨기기 */
+    .header-util {
+        display: none;
+    }
+
+    /* 모바일 메뉴 버튼 표시 및 스타일 */
+    .btn-menu {
+        display: block;
+        margin-left: 15px;
+    }
+    .btn-menu span:nth-child(1) { top: 0; }
+    .btn-menu span:nth-child(2) { top: 50%; transform: translateY(-50%); }
+    .btn-menu span:nth-child(3) { bottom: 0; }
+
+    /* 메뉴 열렸을 때 버튼 모양 (X자) */
+    .btn-menu.active span { background-color: #333 !important; }
+    .btn-menu.active span:nth-child(1) { top: 50%; transform: translateY(-50%) rotate(45deg); }
+    .btn-menu.active span:nth-child(2) { opacity: 0; }
+    .btn-menu.active span:nth-child(3) { bottom: 50%; transform: translateY(50%) rotate(-45deg); }
+
+    /* 모바일 네비게이션 스타일 */
+    .gnb {
+        display: block;
+        position: fixed;
+        top: 0;
+        right: -100%; /* 화면 밖으로 숨김 */
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 1050;
+        transition: right 0.3s ease-in-out;
+        padding-top: 100px; /* 헤더 높이 고려 */
+    }
+
+    .gnb.active {
+        right: 0; /* 화면에 표시 */
+    }
+
+    .gnb ul {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .gnb a {
+        font-size: 20px;
+        color: #333;
+        font-weight: 700;
+    }
+
+    .hero-title {
+        font-size: 32px; /* 글자 크기 축소 */
+        letter-spacing: 1px; /* 자간 축소 */
+    }
+
+    .hero-desc {
+        font-size: 16px; /* 설명 텍스트 크기 축소 */
+        padding: 0 10px; /* 좌우 여백 추가 */
+    }
+
+    /* 모바일 하단 고정 예약 바 */
+    .booking-bar-wrapper {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        margin-top: 0;
+        padding: 0;
+        z-index: 100;
+        background-color: var(--white);
+        box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+    }
+
+    .booking-bar {
+        flex-direction: row;
+        align-items: center;
+        padding: 10px 15px;
+        gap: 10px;
+        border-radius: 0;
+    }
+
+    .booking-item {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding: 0;
+        margin: 0;
+        background-color: transparent; /* 모바일에서는 배경 제거 */
+        border-radius: 0;
+    }
+
+    /* 모바일 하단 바에서는 객실/인원 선택 숨김 */
+    .booking-item:nth-of-type(3) {
+        display: none;
+    }
+
+    .btn-search {
+        width: auto;
+        margin-top: 0;
+        padding: 0 30px; /* 버튼 크기 확보 */
+        flex-shrink: 0; /* 버튼이 찌그러지지 않도록 */
+        height: 40px; /* 모바일 버튼 높이 지정 */
+    }
+
+    .map-wrapper {
+        height: 300px; /* 모바일에서는 지도 높이 축소 */
+    }
+
+    /* 주변시설 가로 스크롤 */
+    .surround-grid {
+        display: flex;
+        overflow-x: auto;
+        gap: 15px;
+        padding-bottom: 20px; /* 스크롤바 공간 확보 */
+        scroll-snap-type: x mandatory; /* 스크롤 스냅 효과 */
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+    }
+
+    .surround-grid::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera */
+    }
+
+    /* 스크롤 버튼 스타일 */
+    .scroll-btn {
+        display: block;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        background-color: rgba(255, 255, 255, 0.9);
+        border: 1px solid #ddd;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        z-index: 10;
+        cursor: pointer;
+        font-size: 18px;
+        color: #333;
+    }
+    .scroll-btn.prev { left: -10px; }
+    .scroll-btn.next { right: -10px; }
+
+    .surround-card {
+        min-width: 280px; /* 카드가 찌그러지지 않도록 최소 너비 설정 */
+        scroll-snap-align: start;
+    }
+
+    /* 하단 고정 바 높이만큼 body에 여백 추가 */
+    body {
+        padding-bottom: 75px;
+    }
+}

@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS KING HOTEL - 미금역 프리미엄 호텔</title>
+    <!-- CSS 연결 -->
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <!-- Flatpickr CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header id="header">
+        <div class="header-inner">
+            <div class="logo"><a href="#">JS KING HOTEL</a></div>
+            <nav class="gnb">
+                <ul>
+                    <li><a href="#about">호텔소개</a></li>
+                    <li><a href="#rooms">객실</a></li>
+                    <li><a href="#surroundings">주변시설</a></li>
+                    <li><a href="#location">오시는길</a></li>
+                </ul>
+            </nav>
+            <div class="header-util">
+                <a href="#" class="btn-book">RESERVATION</a>
+            </div>
+            <!-- 모바일 메뉴 버튼 -->
+            <button class="btn-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="about" class="hero">
+        <div class="hero-content">
+            <h2 class="hero-title">A HIGHER STANDARD</h2>
+            <p class="hero-desc">신분당선, 수인분당선 미금역 도보 1분, OTT 서비스가 완비된 프리미엄 휴식 공간</p>
+        </div>
+        <!-- Booking Bar -->
+        <div class="booking-bar-wrapper">
+            <div class="booking-bar">
+                <div class="booking-item">
+                    <label>체크인</label>
+                    <input type="text" placeholder="날짜 선택" id="checkin">
+                </div>
+                <div class="booking-item">
+                    <label>체크아웃</label>
+                    <input type="text" placeholder="날짜 선택" id="checkout">
+                </div>
+                <div class="booking-item">
+                    <label>객실/인원</label>
+                    <div class="select-fake">객실 1, 성인 2</div>
+                </div>
+                <button class="btn-search">SEARCH</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Rooms Section -->
+    <section id="rooms" class="section rooms">
+        <div class="container">
+            <div class="section-header">
+                <h3>ROOMS & SUITES</h3>
+                <p>고객님의 완벽한 하루를 위해 준비된 다양한 타입의 객실</p>
+            </div>
+            <div class="room-grid">
+                <!-- Room Item 1 -->
+                <article class="room-card">
+                    <div class="room-img">
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=800&auto=format&fit=crop" alt="Standard Room">
+                    </div>
+                    <div class="room-info">
+                        <h4>스탠다드</h4>
+                        <p>편안함과 실용성을 모두 갖춘 합리적인 객실</p>
+                        <a href="#" class="btn-detail" data-detail="아늑하고 편안한 휴식을 위한 스탠다드 객실입니다. 비즈니스 출장객이나 실속 있는 여행객에게 최적화된 공간입니다." data-images='["https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=800&auto=format&fit=crop", "https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?q=80&w=800&auto=format&fit=crop", "https://images.unsplash.com/photo-1618773928121-c32242e63f39?q=80&w=800&auto=format&fit=crop"]' data-amenities='["무료 Wi-Fi", "헤어드라이어", "기본 어메니티", "금연 객실"]'>VIEW DETAILS</a>
+                    </div>
+                </article>
+                <!-- Room Item 2 -->
+                <article class="room-card">
+                    <div class="room-img">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800&auto=format&fit=crop" alt="Deluxe Room">
+                    </div>
+                    <div class="room-info">
+                        <h4>디럭스</h4>
+                        <p>한 단계 높은 수준의 편안함을 제공하는 모던한 객실</p>
+                        <a href="#" class="btn-detail" data-detail="여유로운 공간과 모던한 인테리어가 돋보이는 디럭스 객실입니다. 킹 사이즈 침대와 함께 더욱 편안한 잠자리를 제공합니다." data-images='["https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800&auto=format&fit=crop", "https://images.unsplash.com/photo-1596394516093-501ba68a0ba6?q=80&w=800&auto=format&fit=crop", "https://images.unsplash.com/photo-1566665797739-1674de7a421a?q=80&w=800&auto=format&fit=crop"]' data-amenities='["무료 Wi-Fi", "킹사이즈 침대", "넷플릭스", "고급 어메니티", "금연 객실"]'>VIEW DETAILS</a>
+                    </div>
+                </article>
+                <!-- Room Item 3 -->
+                <article class="room-card">
+                    <div class="room-img">
+                        <img src="https://images.unsplash.com/photo-1590490359683-658d3d23f972?q=80&w=800&auto=format&fit=crop" alt="Premium Room">
+                    </div>
+                    <div class="room-info">
+                        <h4>프리미엄</h4>
+                        <p>최신 스타일러와 공기청정기가 완비된 쾌적한 공간</p>
+                        <a href="#" class="btn-detail" data-detail="스타일러와 공기청정기가 구비되어 있어 쾌적한 환경을 제공합니다. 넷플릭스 등 다양한 OTT 서비스를 대형 TV로 즐기실 수 있습니다." data-images='["https://images.unsplash.com/photo-1590490359683-658d3d23f972?q=80&w=800&auto=format&fit=crop", "https://images.unsplash.com/photo-1598605272254-16f0c0ecdfa5?q=80&w=800&auto=format&fit=crop", "https://images.unsplash.com/photo-1594563703937-fdc640497dcd?q=80&w=800&auto=format&fit=crop"]' data-amenities='["무료 Wi-Fi", "스타일러", "공기청정기", "65인치 TV", "넷플릭스", "금연 객실"]'>VIEW DETAILS</a>
+                    </div>
+                </article>
+                <!-- Room Item 4 -->
+                <article class="room-card">
+                    <div class="room-img">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=800&auto=format&fit=crop" alt="VIP Room">
+                    </div>
+                    <div class="room-info">
+                        <h4>VIP</h4>
+                        <p>안마의자로 최상의 휴식을 선사하는 특별한 객실</p>
+                        <a href="#" class="btn-detail" data-detail="최고급 안마의자가 설치되어 있어 피로를 풀기에 완벽한 객실입니다. 넓은 공간과 프리미엄 어메니티로 특별한 하루를 선사합니다." data-images='["https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=800&auto=format&fit=crop", "https://images.unsplash.com/photo-1631049552240-59c37f38802b?q=80&w=800&auto=format&fit=crop", "https://images.unsplash.com/photo-1522771739844-6a9f6d5f14af?q=80&w=800&auto=format&fit=crop"]' data-amenities='["무료 Wi-Fi", "최고급 안마의자", "스타일러", "공기청정기", "프리미엄 어메니티", "넷플릭스", "금연 객실"]'>VIEW DETAILS</a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Facilities Section -->
+    <section id="surroundings" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h3>SURROUNDINGS</h3>
+                <p>호텔 주변의 다양한 편의 시설</p>
+            </div>
+            <div class="surround-wrapper">
+            <button class="scroll-btn prev">❮</button>
+            <div class="surround-grid">
+                <!-- Item 1 -->
+                <article class="surround-card">
+                    <div class="surround-img">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop" alt="미금역 먹자골목">
+                    </div>
+                    <div class="surround-info">
+                        <h4>미금역 먹자골목</h4>
+                        <p class="category">Dining</p>
+                        <p class="desc">호텔 바로 뒤편에 위치한 다양한 맛집과 카페 거리</p>
+                    </div>
+                </article>
+                <!-- Item 3 -->
+                <article class="surround-card">
+                    <div class="surround-img">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop" alt="정자동 카페거리">
+                    </div>
+                    <div class="surround-info">
+                        <h4>정자동 카페거리</h4>
+                        <p class="category">Attraction</p>
+                        <p class="desc">이국적인 분위기의 테라스 카페와 부티크 숍</p>
+                    </div>
+                </article>
+                <!-- Item 4 -->
+                <article class="surround-card">
+                    <div class="surround-img">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop" alt="판교 테크노밸리">
+                    </div>
+                    <div class="surround-info">
+                        <h4>판교 테크노밸리</h4>
+                        <p class="category">Business</p>
+                        <p class="desc">한국의 실리콘밸리, 주요 IT 기업들이 위치한 첨단 산업 단지</p>
+                    </div>
+                </article>
+                <!-- Item 5 -->
+                <article class="surround-card">
+                    <div class="surround-img">
+                        <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=800&auto=format&fit=crop" alt="분당서울대학교병원">
+                    </div>
+                    <div class="surround-info">
+                        <h4>분당서울대학교병원</h4>
+                        <p class="category">Medical</p>
+                        <p class="desc">차량 5분 거리에 위치한 최상급 의료기관</p>
+                    </div>
+                </article>
+            </div>
+            <button class="scroll-btn next">❯</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location Section -->
+    <section id="location" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h3>LOCATION</h3>
+                <p>오시는 길</p>
+            </div>
+            <div class="map-wrapper">
+                <!-- 구글 지도 임베드 (주소: 대한민국 경기도 성남시 분당구 돌마로 67) -->
+                <iframe 
+                    src="https://maps.google.com/maps?q=%EB%8C%80%ED%95%9C%EB%AF%BC%EA%B5%AD%20%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EC%84%B1%EB%82%A8%EC%8B%9C%20%EB%B6%84%EB%8B%B9%EA%B5%AC%20%EB%8F%8C%EB%A7%88%EB%A1%9C%2067&t=&z=17&ie=UTF8&iwloc=&output=embed" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-info">
+                <p class="footer-logo">JS KING HOTEL</p>
+                <div class="footer-contact">
+                    <span>경기 성남시 분당구 돌마로 67 7층</span>
+                    <span>TEL : 0507-1478-8845</span>
+                </div>
+                <p class="copyright">&copy; 2024 JS KING HOTEL. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Room Modal -->
+    <div id="room-modal" class="modal">
+        <div class="modal-overlay"></div>
+        <div class="modal-content">
+            <button class="btn-close">&times;</button>
+            <div class="modal-gallery">
+                <img src="" alt="Room main image" class="modal-main-img">
+                <div class="modal-thumb-list"></div>
+            </div>
+            <div class="modal-body">
+                <h3 class="modal-title"></h3>
+                <p class="modal-desc"></p>
+                <div class="modal-features">
+                    <h4>Room Amenities</h4>
+                    <ul>
+                        <!-- JS로 동적 생성 -->
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- JS 연결 -->
+    <!-- Flatpickr JS -->
+    <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <!-- 메인 스크립트 -->
+    <script src="js/main.js"></script>
+</body>
+</html>
