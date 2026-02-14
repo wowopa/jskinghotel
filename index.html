@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="미금역 도보 1분, OTT 완비 객실과 편리한 접근성을 제공하는 JS KING HOTEL 공식 사이트입니다.">
     <title>JS KING HOTEL - 미금역 프리미엄 호텔</title>
     <!-- CSS 연결 -->
     <link rel="stylesheet" href="css/reset.css">
@@ -20,7 +21,7 @@
     <header id="header">
         <div class="header-inner">
             <div class="logo"><a href="#">JS KING HOTEL</a></div>
-            <nav class="gnb">
+            <nav class="gnb" id="site-nav">
                 <ul>
                     <li><a href="#about">호텔소개</a></li>
                     <li><a href="#rooms">객실</a></li>
@@ -32,7 +33,7 @@
                 <a href="#" class="btn-book">RESERVATION</a>
             </div>
             <!-- 모바일 메뉴 버튼 -->
-            <button class="btn-menu">
+            <button class="btn-menu" aria-label="메뉴 열기" aria-expanded="false" aria-controls="site-nav">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -43,7 +44,7 @@
     <!-- Hero Section -->
     <section id="about" class="hero">
         <div class="hero-content">
-            <h2 class="hero-title">A HIGHER STANDARD</h2>
+            <h1 class="hero-title">A HIGHER STANDARD</h1>
             <p class="hero-desc">신분당선, 수인분당선 미금역 도보 1분, OTT 서비스가 완비된 프리미엄 휴식 공간</p>
         </div>
         <!-- Booking Bar -->
@@ -77,7 +78,7 @@
                 <!-- Room Item 1 -->
                 <article class="room-card">
                     <div class="room-img">
-                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=800&auto=format&fit=crop" alt="General Room">
+                        <img src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?q=80&w=800&auto=format&fit=crop" alt="General Room" loading="lazy" decoding="async">
                     </div>
                     <div class="room-info">
                         <h4>일반</h4>
@@ -88,7 +89,7 @@
                 <!-- Room Item 2 -->
                 <article class="room-card">
                     <div class="room-img">
-                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800&auto=format&fit=crop" alt="OTT Room">
+                        <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427?q=80&w=800&auto=format&fit=crop" alt="OTT Room" loading="lazy" decoding="async">
                     </div>
                     <div class="room-info">
                         <h4>OTT룸</h4>
@@ -99,7 +100,7 @@
                 <!-- Room Item 3 -->
                 <article class="room-card">
                     <div class="room-img">
-                        <img src="https://images.unsplash.com/photo-1590490359683-658d3d23f972?q=80&w=800&auto=format&fit=crop" alt="Twin Room">
+                        <img src="https://images.unsplash.com/photo-1590490359683-658d3d23f972?q=80&w=800&auto=format&fit=crop" alt="Twin Room" loading="lazy" decoding="async">
                     </div>
                     <div class="room-info">
                         <h4>트윈</h4>
@@ -110,7 +111,7 @@
                 <!-- Room Item 4 -->
                 <article class="room-card">
                     <div class="room-img">
-                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=800&auto=format&fit=crop" alt="Semi-Suite Room">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=800&auto=format&fit=crop" alt="Semi-Suite Room" loading="lazy" decoding="async">
                     </div>
                     <div class="room-info">
                         <h4>준특실</h4>
@@ -121,7 +122,7 @@
                 <!-- Room Item 5 -->
                 <article class="room-card">
                     <div class="room-img">
-                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=800&auto=format&fit=crop" alt="Luxury Suite">
+                        <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?q=80&w=800&auto=format&fit=crop" alt="Luxury Suite" loading="lazy" decoding="async">
                     </div>
                     <div class="room-info">
                         <h4>특실</h4>
@@ -146,7 +147,7 @@
                 <!-- Item 1 -->
                 <article class="surround-card">
                     <div class="surround-img">
-                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop" alt="미금역 먹자골목">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?q=80&w=800&auto=format&fit=crop" alt="미금역 먹자골목" loading="lazy" decoding="async">
                     </div>
                     <div class="surround-info">
                         <h4>미금역 먹자골목</h4>
@@ -157,7 +158,7 @@
                 <!-- Item 3 -->
                 <article class="surround-card">
                     <div class="surround-img">
-                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop" alt="정자동 카페거리">
+                        <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?q=80&w=800&auto=format&fit=crop" alt="정자동 카페거리" loading="lazy" decoding="async">
                     </div>
                     <div class="surround-info">
                         <h4>정자동 카페거리</h4>
@@ -168,7 +169,7 @@
                 <!-- Item 4 -->
                 <article class="surround-card">
                     <div class="surround-img">
-                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop" alt="판교 테크노밸리">
+                        <img src="https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=800&auto=format&fit=crop" alt="판교 테크노밸리" loading="lazy" decoding="async">
                     </div>
                     <div class="surround-info">
                         <h4>판교 테크노밸리</h4>
@@ -179,7 +180,7 @@
                 <!-- Item 5 -->
                 <article class="surround-card">
                     <div class="surround-img">
-                        <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=800&auto=format&fit=crop" alt="분당서울대학교병원">
+                        <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?q=80&w=800&auto=format&fit=crop" alt="분당서울대학교병원" loading="lazy" decoding="async">
                     </div>
                     <div class="surround-info">
                         <h4>분당서울대학교병원</h4>
@@ -208,7 +209,8 @@
                     height="450" 
                     style="border:0;" 
                     allowfullscreen="" 
-                    loading="lazy">
+                    loading="lazy"
+                    title="JS KING HOTEL 위치 지도">
                 </iframe>
             </div>
         </div>
@@ -229,17 +231,17 @@
     </footer>
 
     <!-- Room Modal -->
-    <div id="room-modal" class="modal">
+    <div id="room-modal" class="modal" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modal-title" aria-describedby="modal-desc">
         <div class="modal-overlay"></div>
         <div class="modal-content">
-            <button class="btn-close">&times;</button>
+            <button class="btn-close" aria-label="객실 상세 닫기">&times;</button>
             <div class="modal-gallery">
                 <img src="" alt="Room main image" class="modal-main-img">
                 <div class="modal-thumb-list"></div>
             </div>
             <div class="modal-body">
-                <h3 class="modal-title"></h3>
-                <p class="modal-desc"></p>
+                <h3 class="modal-title" id="modal-title"></h3>
+                <p class="modal-desc" id="modal-desc"></p>
                 <div class="modal-features">
                     <h4>Room Amenities</h4>
                     <ul>
